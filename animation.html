@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        /* animation properties */
+        animation-name: simpleAnim;
+        /* animation-duration: 2s; */
+        animation-timing-function: ease;
+        animation-delay: 1s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-fill-mode: forwards;
+        animation-play-state: running;
+      }
+
+      @keyframes simpleAnim {
+        0% {
+          background-color: red;
+          width: 100px;
+        }
+         50% {
+          background-color: green;
+          width: 150px;
+        }
+
+        100% {
+          background-color: blue;
+          width: 200px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+  </body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Simple DOM</title>
+
+<style>
+body{
+    font-family: Arial;
+    padding:20px;
+}
+li{
+    background:#eee;
+    padding:8px;
+    margin:5px;
+}
+</style>
+</head>
+
+<body>
+
+<h2>Simple Name List</h2>
+
+<input type="text" id="name" placeholder="Enter name">
+
+<button id="addBtn">Add</button>
+
+<ul id="list"></ul>
+
+
+<script>
+
+// Select elements
+const input = document.getElementById("name");
+const button = document.getElementById("addBtn");
+const list = document.getElementById("list");
+
+// Button click
+button.addEventListener("click", function(){
+
+    // Get input value
+    let value = input.value;
+
+    // Check empty
+    if(value === ""){
+        alert("Enter name first!");
+        return;
+    }
+
+    // Create li
+    let li = document.createElement("li");
+
+    // Add text
+    li.innerText = value;
+
+    // Click to delete
+    li.addEventListener("click", function(){
+        li.remove();
+    });
+
+    // Add to list
+    list.appendChild(li);
+
+    // Clear input
+    input.value = "";
+
+});
+
+</script>
+
+</body>
+</html>
