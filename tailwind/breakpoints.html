@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <!-- Responsive Layout Example (Flex) -->
+    <div class="flex flex-col md:flex-row gap-4">
+      <div class="bg-red-300 p-4">Box 1</div>
+      <div class="bg-blue-300 p-4">Box 2</div>
+    </div>
+
+    <!-- Responsive Grid Example -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4"></div>
+
+    <!-- Show / Hide using Breakpoints -->
+    <p class="block md:hidden">Mobile Only</p>
+    <p class="hidden md:block">Desktop Only</p>
+
+    <!-- Responsive Text Alignment -->
+    <p class="text-center md:text-left lg:text-right">
+      Responsive Text
+    </p>
+    <!-- Responsive Width Example -->
+    <div class="w-full md:w-1/2 lg:w-1/3"></div>
+
+    <!-- Card Responsive -->
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 p-4">
+    <div class="border p-4 rounded-lg">Card 1</div>
+    <div class="border p-4 rounded-lg">Card 2</div>
+    <div class="border p-4 rounded-lg">Card 3</div>
+    </div>
+
+
+  </body>
+</html>
