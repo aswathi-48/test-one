@@ -1,71 +1,84 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-<title>Simple DOM</title>
+  <head>
+    <title>Simple DOM</title>
 
-<style>
-body{
-    font-family: Arial;
-    padding:20px;
-}
-li{
-    background:#eee;
-    padding:8px;
-    margin:5px;
-}
-</style>
-</head>
+    <style>
+      body {
+        font-family: Arial;
+        padding: 20px;
+      }
+      li {
+        background: #eee;
+        padding: 8px;
+        margin: 5px;
+      }
+    </style>
+  </head>
 
-<body>
+  <body>
+    <h2>Simple Name List</h2>
 
-<h2>Simple Name List</h2>
+    <input type="text" id="name" placeholder="Enter name" />
+    <button id="addBtn">Add</button>
+    <ul id="list"></ul>
+    <script>
+      // Select elements
+      const input = document.getElementById("name");
+      const button = document.getElementById("addBtn");
+      const list = document.getElementById("list");
 
-<input type="text" id="name" placeholder="Enter name">
+      // Button click
+      button.addEventListener("click", function () {
+        // Get input value
+        let value = input.value;
+        // Check empty
+        if (value === "") {
+          alert("Enter name first!");
+          return;
+        }
+        // Create li
+        let li = document.createElement("li");
 
-<button id="addBtn">Add</button>
+        let span = document.createElement("span");
+        span.innerText = value;
 
-<ul id="list"></ul>
+        let updateBtn = document.createElement("button");
+        updateBtn.innerText = "Update";
 
+          let deleteBtn = document.createElement("button");
+          deleteBtn.innerText = "Delete";
 
-<script>
+        // Add text
+        // li.innerText = value;
 
-// Select elements
-const input = document.getElementById("name");
-const button = document.getElementById("addBtn");
-const list = document.getElementById("list");
+        // Click to delete
+        // li.addEventListener("click", function(){
+        //     li.remove();
+        // });
 
-// Button click
-button.addEventListener("click", function(){
+        updateBtn.addEventListener("click", function () {
+          let newName = prompt("Enter new name");
 
-    // Get input value
-    let value = input.value;
+          if (newName) {
+            span.innerText = newName;
+          }
+        });
 
-    // Check empty
-    if(value === ""){
-        alert("Enter name first!");
-        return;
-    }
-
-    // Create li
-    let li = document.createElement("li");
-
-    // Add text
-    li.innerText = value;
-
-    // Click to delete
-    li.addEventListener("click", function(){
+        deleteBtn.addEventListener("click", function(){
         li.remove();
     });
 
-    // Add to list
-    list.appendChild(li);
+        // Add to list
+        list.appendChild(li);
+        li.appendChild(span);
 
-    // Clear input
-    input.value = "";
+        li.appendChild(updateBtn);
+        li.appendChild(deleteBtn);
 
-});
-
-</script>
-
-</body>
+        // Clear input
+        input.value = "";
+      });
+    </script>
+  </body>
 </html>
