@@ -7,20 +7,32 @@
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
+    <!-- sm -mobile -640px
+    md -tablet -768px
+    lg  -laptop - 1024px
+    xl-desktop - 1280px
+    -->
     <!-- Responsive Layout Example (Flex) -->
     <div class="flex flex-col md:flex-row gap-4">
       <div class="bg-red-300 p-4">Box 1</div>
       <div class="bg-blue-300 p-4">Box 2</div>
     </div>
 
-    <!-- Responsive Grid Example -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4"></div>
+   <!-- <button class="border p-2 m-4 w-40 bg-red-300 text-black hover:bg-red-400" >click</button> -->
+     <!-- Responsive Grid Example -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div class="bg-red-100">1</div>
+      <div class="bg-red-200">2</div>
+      <div class="bg-red-300">3</div>
+      <div class="bg-red-400">4</div>
+    </div>
 
     <!-- Show / Hide using Breakpoints -->
     <p class="block md:hidden">Mobile Only</p>
     <p class="hidden md:block">Desktop Only</p>
 
-    <!-- Responsive Text Alignment -->
+
+ <!-- Responsive Text Alignment -->
     <p class="text-center md:text-left lg:text-right">
       Responsive Text
     </p>
@@ -35,6 +47,6 @@
     <div class="border p-4 rounded-lg">Card 3</div>
     </div>
 
-
+    <button class="border p-2 m-3 w-40 bg-red-300 hover:bg-red-500">click</button>
   </body>
 </html>
